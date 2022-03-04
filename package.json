@@ -1,9 +1,17 @@
 {
   "name": "rollup-plugin-glsl-loader",
   "version": "1.0.0",
+  "author": {
+    "name": "haiyoucuv",
+    "email": "qiuxu123456@live.com",
+    "url": "https://github.com/haiyoucuv"
+  },
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/haiyoucuv/rollup-plugin-glsl-loader"
+  },
   "scripts": {
     "build": "rollup -c rollup.mjs"
   },
