@@ -13,7 +13,8 @@
     "url": "https://github.com/haiyoucuv/rollup-plugin-glsl-loader"
   },
   "scripts": {
-    "build": "rollup -c rollup.mjs"
+    "build": "rollup -c rollup.mjs",
+    "publish": "npm publish"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
