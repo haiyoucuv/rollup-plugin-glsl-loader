@@ -6,6 +6,13 @@
     "email": "qiuxu123456@live.com",
     "url": "https://github.com/haiyoucuv"
   },
+  "keywords": [
+    "glsl",
+    "shader",
+    "webgl",
+    "frag",
+    "vert"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "license": "MIT",
