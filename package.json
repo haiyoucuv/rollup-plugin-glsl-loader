@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "rollup -c rollup.mjs",
-    "publish": "npm version patch && npm run build && npm publish"
+    "pub": "npm version patch && npm run build && npm publish"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
