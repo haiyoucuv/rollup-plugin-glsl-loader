@@ -25,7 +25,7 @@ var fs__namespace = /*#__PURE__*/_interopNamespace(fs);
 var path__namespace = /*#__PURE__*/_interopNamespace(path);
 
 var name = "rollup-plugin-glsl-loader";
-var version = "1.0.1";
+var version = "1.0.2";
 
 /*
  * index.ts

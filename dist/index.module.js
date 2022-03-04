@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 var name = "rollup-plugin-glsl-loader";
-var version = "1.0.1";
+var version = "1.0.2";
 
 /*
  * index.ts
