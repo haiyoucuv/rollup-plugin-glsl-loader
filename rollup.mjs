@@ -14,6 +14,10 @@ import { terser } from "rollup-plugin-terser";
 export default {
 	input: "src/index.ts",
 	cache: true,
+	external: [
+		"fs",
+		"path"
+	],
 	output: [
 		{
 			file: "dist/index.js",
@@ -29,9 +33,7 @@ export default {
 		typescript({ tsconfig: "./tsconfig.json" }),
 		json(),
 		resolve(),
-		commonjs({
-			include: 'node_modules/**',
-		}),
+		commonjs(),
 		// terser(),
 	]
 };
