@@ -11,6 +11,12 @@ import {version, name} from "../package.json"
 
 export default function glslLoader(options) {
 
+	const pluginOptions = {
+		glslify: false,
+		glslifyOptions: {},
+		...options,
+	};
+
 	let glslifyCompile = null;
 
 	const glslifyInit = async () => {
@@ -21,8 +27,8 @@ export default function glslLoader(options) {
 			if (glslify && glslify.compile && typeof glslify.compile === 'function') {
 				glslifyCompile = glslify.compile;
 			}
-		} catch {
-			// do nothing
+		} catch (e) {
+
 		}
 	}
 
@@ -65,7 +71,9 @@ export default function glslLoader(options) {
 		version,
 
 		async options(options) {
-			await glslifyInit();
+			if (pluginOptions.glslify) {
+				await glslifyInit();
+			}
 		},
 
 		async load(id) {
@@ -73,11 +81,19 @@ export default function glslLoader(options) {
 				let source = loadSource(id, this.error.bind(this));
 
 				// 载入 glslify
-				try {
-					source = await glslifyLoadSource(id, source, {},
-						(message) => this.error({ message }));
-				} catch (err) {
-					this.error({ message: `Error load GLSL source with glslify:\n${err.message}` });
+				if (pluginOptions.glslify) {
+					try {
+						source = await glslifyLoadSource(
+							id,
+							source,
+							pluginOptions.glslifyOptions,
+							(message) => this.error({ message })
+						);
+					} catch (err) {
+						this.error({
+							message: `Error load glsl file with glslify:\n${err.message}`
+						});
+					}
 				}
 
 				// 导出es模块
