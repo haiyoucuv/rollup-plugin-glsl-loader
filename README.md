@@ -1,4 +1,4 @@
-# rollup-plugin-glsl-loader
+# @rollup/plugin-glsl-loader
 import your shader file using ES modules.
 
 ## Do what
@@ -21,21 +21,21 @@ Supported file types
 ### Install
 
 ```shell
-yarn add rollup-plugin-glsl-loader -D
+yarn add @rollup/plugin-glsl-loader -D
 ```
 
 or
 
 ```shell
-npm i rollup-plugin-glsl-loader -D
+npm i @rollup/plugin-glsl-loader -D
 ```
 
 ### Use in Rollup config file
 
 ```javascript
-const glslLoader = require("rollup-plugin-glsl-loader");
+const glslLoader = require("@rollup/plugin-glsl-loader");
 // or use ES modules
-// import glslLoader from "rollup-plugin-glsl-loader";
+// import glslLoader from "@rollup/plugin-glsl-loader";
 
 export default {
 	// [...],
@@ -95,7 +95,7 @@ yarn add glslify -D
 then
 
 ```javascript
-const glslLoader = require("rollup-plugin-glsl-loader");
+const glslLoader = require("@rollup/plugin-glsl-loader");
 // or use ES modules
 // import glslLoader from "rollup-plugin-glsl-loader";
 

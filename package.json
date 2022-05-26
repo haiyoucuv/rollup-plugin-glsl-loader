@@ -1,5 +1,5 @@
 {
-  "name": "rollup-plugin-glsl-loader",
+  "name": "@rollup/plugin-glsl-loader",
   "version": "1.0.13",
   "author": {
     "name": "haiyoucuv",
